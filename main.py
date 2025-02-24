@@ -10,15 +10,5 @@ bot = telebot.TeleBot(BOT_TOKEN)
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     bot.reply_to(message, "Xin chào! Tôi là bot Telegram của bạn.")
-    
-@bot.message_handler(commands=['upd'])
-def send_welcome(message):
-	global botRunning
-	botRunning = False
-	print("Reset bot")
-    os.system("pip install -r requirements.txt")
-    os.system("python3 main.py")
 
-while (botRunning):
-	time.sleep(1)
-    bot.polling()
+bot.infinity_polling()
