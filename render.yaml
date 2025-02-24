@@ -1,0 +1,11 @@
+# Exported from Render on 2025-02-24T14:58:38Z
+services:
+- type: web
+  name: bothuy
+  runtime: python
+  repo: https://github.com/PQHtool/bottelegram
+  plan: free
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: python main.py
+version: "1"
