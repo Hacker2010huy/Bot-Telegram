@@ -15,7 +15,7 @@ def send_welcome(message):
 def send_welcome(message):
 	global botRunning
 	botRunning = False
-    bot.reply_to(message, "Bot đang update lại!")
+	print("Reset bot")
     os.system("pip install -r requirements.txt")
     os.system("python3 main.py")
 
