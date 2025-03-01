@@ -1,5 +1,6 @@
 from keep_alive import keep_alive
 keep_alive()
+print("Bot offline")
 
 import telebot,os,time
 bot = telebot.TeleBot("7399774608:AAExFx2rNd_LYCBfTHGDMQWpzBFs7JFFm4U", parse_mode="HTML")
