@@ -32,4 +32,4 @@ def offbot(message):
         bot.stop_polling()
 
 bot.infinity_polling()
-os.system(f"python3 stop.py")
+os.system(f"python stop.py")
