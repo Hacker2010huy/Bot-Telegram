@@ -15,7 +15,7 @@ PHAN QUOC HUY BOT
 Danh sách các lệnh
 =================
 /help - Xem lệnh
-/tx - Sắp có rồi nha:)
+/tx - Sắp có hoặc không:)
 ADMIN:
 /offbot - Tắt bot
 /onbot - Bật bot
