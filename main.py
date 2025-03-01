@@ -18,6 +18,7 @@ Danh sách các lệnh
 =================
 /help - Xem lệnh
 /tx - Sắp có hoặc không:)
+/status - Xem trạng thái bot
 Tự động:
 gửi file .py để enc
 ADMIN:
