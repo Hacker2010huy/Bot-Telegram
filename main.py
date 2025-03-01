@@ -28,8 +28,8 @@ ADMIN:
 '''
 	bot.reply_to(message, text);
 
-@bot.message_handler(commands=['time'])
-def send_time(message):
+@bot.message_handler(commands=['status'])
+def status_bot(message):
     current_time = time.time()
     elapsed_time = current_time - start_time
     days, seconds = elapsed_time // 86400, elapsed_time % 86400
