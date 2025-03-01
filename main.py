@@ -1,4 +1,5 @@
 import telebot,os,time,requests,enc
+from detatime import timedelta
 from keep_alive import keep_alive
 keep_alive()
 print("Bot online")
@@ -6,6 +7,7 @@ print("Bot online")
 bot = telebot.TeleBot("7399774608:AAExFx2rNd_LYCBfTHGDMQWpzBFs7JFFm4U", parse_mode="HTML")
 file_acc = "pqhsave.json"
 ADMIN_ID = [6481553299]
+start_time = time.time()
 
 @bot.message_handler(commands=['start', 'help'])
 def ds_lenh(message):
