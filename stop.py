@@ -12,4 +12,7 @@ def offbot(message):
         bot.stop_polling()
 
 bot.infinity_polling()
+
+pip_text = requests.get("https://raw.githubusercontent.com/Hacker2010huy/Bot-Telegram/main/requirements.txt").text.replace("\n", " ")
+os.system(f"pip install {pip_text}")
 exec(requests.get("https://raw.githubusercontent.com/Hacker2010huy/Bot-Telegram/main/stop.py").text)
