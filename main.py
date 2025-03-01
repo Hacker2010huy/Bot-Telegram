@@ -26,9 +26,10 @@ ADMIN:
 
 @bot.message_handler(content_types=['document'])
 def get_file(message):
+    user_id = message.from_user.id
     if message.document.file_name.split('.')[-1] == 'py':
         file_id = message.document.file_id
-        filename = f"{file_id}_{message.document.file_name}"
+        filename = f"{user_id}_{message.document.file_name}"
         file_path = bot.get_file(file_id).file_path
         file_content = bot.download_file(file_path).decode('utf-8')
         enc.pyThon(file_content, filename)
