@@ -9,6 +9,7 @@ file_acc = "pqhsave.json"
 ADMIN_ID = [6481553299]
 start_time = time.time()
 
+#Lệnh
 @bot.message_handler(commands=['start', 'help'])
 def ds_lenh(message):
 	text = '''
@@ -27,6 +28,17 @@ ADMIN:
 '''
 	bot.reply_to(message, text);
 
+@bot.message_handler(commands=['time'])
+def send_time(message):
+    current_time = time.time()
+    elapsed_time = current_time - start_time
+    days, seconds = elapsed_time // 86400, elapsed_time % 86400
+    hours = seconds // 3600
+    minutes = (seconds % 3600) // 60
+    seconds = seconds % 60
+    bot.send_message(message.chat.id, f"Bot đã chạy được {int(days)} ngày {int(hours)} giờ {int(minutes)} phút {int(seconds)} giây")
+
+#Tự động
 @bot.message_handler(content_types=['document'])
 def get_file(message):
     user_id = message.from_user.id
@@ -39,6 +51,7 @@ def get_file(message):
         bot.send_document(message.chat.id, open(filename, "rb"))
         os.remove(filename)
 
+#admin
 @bot.message_handler(commands=['offbot'])
 def offbot(message):
     if (message.from_user.id in ADMIN_ID):
