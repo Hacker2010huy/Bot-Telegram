@@ -2,7 +2,7 @@ import telebot,os,time
 from keep_alive import keep_alive
 keep_alive()
 
-bot = telebot.TeleBot("7384250892:AAHKP4H-Bbao773rN_oxF9lp41W3OGoF_m8", parse_mode="HTML")
+bot = telebot.TeleBot("7399774608:AAExFx2rNd_LYCBfTHGDMQWpzBFs7JFFm4U", parse_mode="HTML")
 file_acc = "pqhsave.json"
 ADMIN_ID = [6481553299]
 
