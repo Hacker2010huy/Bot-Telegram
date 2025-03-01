@@ -1,5 +1,5 @@
 import telebot,os,time,requests,enc
-from detatime import timedelta
+from datetime import timedelta
 from keep_alive import keep_alive
 keep_alive()
 print("Bot online")
