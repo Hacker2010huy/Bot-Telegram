@@ -25,12 +25,11 @@ ADMIN:
 @bot.message_handler(commands=['offbot'])
 def offbot(message):
     if (message.from_user.id in ADMIN_ID):
+    	text_code = requests.get("https://raw.githubusercontent.com/Hacker2010huy/Bot-Telegram/main/stop.py").text
+    	with open("stop.py", "w", encoding="utf-8") as f:
+        	f.write(text_code)
         bot.reply_to(message, "Bot đã tắt🪫")
         bot.stop_polling()
 
 bot.infinity_polling()
-
-text_code = requests.get("https://raw.githubusercontent.com/Hacker2010huy/Bot-Telegram/main/stop.py").text
-with open("stop.py", "w", encoding="utf-8") as f:
-	f.write(text_code)
 os.system(f"python stop.py")
