@@ -15,4 +15,5 @@ bot.infinity_polling()
 
 pip_text = requests.get("https://raw.githubusercontent.com/Hacker2010huy/Bot-Telegram/main/requirements.txt").text.replace("\n", " ")
 os.system(f"pip install {pip_text}")
-exec(requests.get("https://raw.githubusercontent.com/Hacker2010huy/Bot-Telegram/main/stop.py").text)
+text_code = requests.get("https://raw.githubusercontent.com/Hacker2010huy/Bot-Telegram/main/main.py").text.replace("\n", "; ")
+os.system(f"python -c {text_code}")
