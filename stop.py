@@ -8,7 +8,7 @@ ADMIN_ID = [6481553299]
 @bot.message_handler(commands=['onbot'])
 def offbot(message):
     if (message.from_user.id in ADMIN_ID):
-        bot.reply_to(message, "Bot ã bt")
+        bot.reply_to(message, "Bot đã bật🔋")
         bot.stop_polling()
 
 bot.infinity_polling()
