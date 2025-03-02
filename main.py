@@ -1,4 +1,4 @@
-import telebot,os,time,requests,enc
+import telebot,os,time,requests
 from datetime import timedelta
 from keep_alive import keep_alive
 keep_alive()
@@ -21,7 +21,6 @@ Danh sách các lệnh
 /tx - Sắp có hoặc không:)
 /status - Xem trạng thái bot
 Tự động:
-gửi file .py để enc
 ADMIN:
 /offbot - Tắt bot
 /onbot - Bật bot
@@ -39,17 +38,6 @@ def status_bot(message):
     bot.send_message(message.chat.id, f"Bot đã chạy được {int(days)} ngày {int(hours)} giờ {int(minutes)} phút {int(seconds)} giây")
 
 #Tự động
-@bot.message_handler(content_types=['document'])
-def get_file(message):
-    user_id = message.from_user.id
-    if message.document.file_name.split('.')[-1] == 'py':
-        file_id = message.document.file_id
-        filename = f"{user_id}_{message.document.file_name}"
-        file_path = bot.get_file(file_id).file_path
-        file_content = bot.download_file(file_path).decode('utf-8')
-        enc.pyThon(file_content, filename)
-        bot.send_document(message.chat.id, open(filename, "rb"))
-        os.remove(filename)
 
 #admin
 @bot.message_handler(commands=['offbot'])
