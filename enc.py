@@ -5,7 +5,7 @@ def number_enc():
 def ran_space():
     return " " * random.randint(2000, 50000)
 def ran_text():
-    kytu = list("QWERTYUIOPASDFGHJKLZXCVBNM~`|â€¢âˆšÏ€Ã·Ã—Â§âˆ†Â£â‚¬$Â¢^Â°={}\\%Â©Â®â„¢âœ“[]@#â‚«_&-+()/*:;!?ðŸ”´ðŸŸ ðŸŸ¡ðŸŸ¢ðŸ”µðŸŸ£ðŸŸ¤âš«âšªqwertyuiopasdfghjklzxcvbnm1234567890")
+    kytu = list("QWERTYUIOPASDFGHJKLZXCVBNM~`|•√π÷×§∆£€$¢^°={}\\%©®™✓[]@#₫_&-+()/*:;!?🔴🟠🟡🟢🔵🟣🟤⚫⚪qwertyuiopasdfghjklzxcvbnm1234567890")
     return random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu) + random.choice(kytu)
 
 def pyThon(code, namefile):
@@ -17,7 +17,7 @@ def pyThon(code, namefile):
                 continue
             if c.startswith(" "):
                 c = " " * 250 + c
-            c = c + f"{ran_space()}#{number_enc()}ENCODE BY PHAN QUOC HUY DEPTRY\n#DÒNG NÀY QUAN TRỌNG KHÔNG ĐƯỢC XOÁ{ran_space()}{ran_text()}"
+            c = c + f"#DELETE TO DEC{ran_space()}{number_enc()}ENCODE BY PHAN QUOC HUY DEPTRY\n#DELETE TO DEC{ran_space()}{ran_text()}"
             encode.append(c)
     encode = base64.b64encode("\n".join(encode).encode("utf-8"))
     with open(f"{namefile}", "w", encoding="utf-8") as fi:
